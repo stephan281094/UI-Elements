@@ -1,0 +1,58 @@
+/**
+    UI Elements - Grid
+    Copyright by Stephan de Vries
+*/
+
+.container {
+    position: relative;
+    height: 100%;
+    max-width: 1100px; /* Recommended: 1100px; */
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.grid .row {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.grid [class*='col-'] {
+    position: relative;
+    float: left;
+}
+
+.spaced-1.grid > [class*='col-'], .spaced-1.grid > .row > [class*='col-'] {padding: 0.2rem;}
+.spaced.grid   > [class*='col-'], .spaced.grid   > .row > [class*='col-'], /* Default spacing */
+.spaced-2.grid > [class*='col-'], .spaced-2.grid > .row > [class*='col-'] {padding: 0.5rem;}
+.spaced-3.grid > [class*='col-'], .spaced-3.grid > .row > [class*='col-'] {padding: .75rem;}
+.spaced-4.grid > [class*='col-'], .spaced-4.grid > .row > [class*='col-'] {padding: 001rem;}
+.spaced-5.grid > [class*='col-'], .spaced-5.grid > .row > [class*='col-'] {padding: 1.25rem;}
+.spaced-6.grid > [class*='col-'], .spaced-6.grid > .row > [class*='col-'] {padding: 1.5rem;}
+
+.grid .col-1  {width: 008.333333%;}
+.grid .col-2  {width: 016.666666%;}
+.grid .col-3  {width: 025.000000%;}
+.grid .col-4  {width: 033.333333%;}
+.grid .col-5  {width: 041.666666%;}
+.grid .col-6  {width: 050.000000%;}
+.grid .col-7  {width: 058.333333%;}
+.grid .col-8  {width: 066.666666%;}
+.grid .col-9  {width: 075.000000%;}
+.grid .col-10 {width: 083.333333%;}
+.grid .col-11 {width: 091.666666%;}
+.grid .col-12 {width: 100.000000%;}
