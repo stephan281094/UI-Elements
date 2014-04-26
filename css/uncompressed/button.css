@@ -1,0 +1,81 @@
+a.button {
+    position: relative;
+    float: left;
+    padding: 1rem 2rem;
+    margin: 1rem .5rem;
+    color: white;
+    border: 1px solid transparent;
+    text-align: center;
+    background-color: #888;
+    box-shadow: inset 0 0 0 0px black;
+    
+    transition: all .4s; 
+}
+
+a.fluid.button {
+    margin: 0;
+    width: 100%;
+}
+
+a.button:hover {
+    background-color: #666;
+}
+
+a.simple.button {
+    border: 1px solid transparent;
+    color: #888;
+    background-color: transparent !important;
+    box-shadow: inset 0 0 0 3px #888;
+}
+
+a.simple.button:hover {
+    box-shadow: inset 0 0 0 3px #666;
+}
+
+/*/ Blue /*/
+a.blue.button                 {background-color: #4682b4;}
+a.blue.button:hover           {background-color: #246092;}
+a.blue.simple.button          {color:            #4682b4;
+                               box-shadow:       inset 0 0 0 3px #4682b4;}
+a.blue.simple.button:hover    {box-shadow:       inset 0 0 0 3px #246092;
+                               color:            #246092;}
+
+/*/ Green /*/
+a.green.button                {background-color: #9acd32;}
+a.green.button:hover          {background-color: #78ab10;}
+a.green.simple.button         {color:            #9acd32;
+                               box-shadow:       inset 0 0 0 3px #9acd32;}
+a.green.simple.button:hover   {box-shadow:       inset 0 0 0 3px #78ab10;
+                               color:            #78ab10;}
+
+/*/ Yellow /*/
+a.yellow.button               {background-color: #ffff66; color: rgba(0, 0, 0, 0.4)}
+a.yellow.button:hover         {background-color: #dddd44;}
+a.yellow.simple.button        {color:            #ffff66;
+                               box-shadow:       inset 0 0 0 3px #ffff66;}
+a.yellow.simple.button:hover  {box-shadow:       inset 0 0 0 3px #dddd44;
+                               color:            #dddd44;}
+
+/*/ orange /*/
+a.orange.button               {background-color: #ff9900;}
+a.orange.button:hover         {background-color: #dd7700;}
+a.orange.simple.button        {color:            #ff9900;
+                               box-shadow:       inset 0 0 0 3px #ff9900;}
+a.orange.simple.button:hover  {box-shadow:       inset 0 0 0 3px #dd7700;
+                               color:            #dd7700;}
+
+/*/ Red /*/
+a.red.button                  {background-color: #993300;}
+a.red.button:hover            {background-color: #771100;}
+a.red.simple.button           {color:            #993300;
+                               box-shadow:       inset 0 0 0 3px #993300;}
+a.red.simple.button:hover     {box-shadow:       inset 0 0 0 3px #771100;
+                               color:            #771100;}
+
+/*/ Purple /*/
+a.purple.button               {background-color: #990099;}
+a.purple.button:hover         {background-color: #770077;}
+a.purple.simple.button        {color:            #990099;
+                               box-shadow:       inset 0 0 0 3px #990099;}
+a.purple.simple.button:hover  {box-shadow:       inset 0 0 0 3px #770077;
+                               color:            #770077;}

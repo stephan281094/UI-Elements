@@ -16,6 +16,7 @@
 
 .grid {
     position: relative;
+    float: left;
     width: 100%;
 }
 
@@ -56,3 +57,15 @@
 .grid .col-10 {width: 083.333333%;}
 .grid .col-11 {width: 091.666666%;}
 .grid .col-12 {width: 100.000000%;}
+
+
+/*/ Media Queries /*/
+@media screen and (max-width: 45em) {
+    /* TODO: Make menu-handler visible and hide menu items */
+}
+
+@media screen and (max-width: 36em) {
+    .grid [class*='col-'] {
+        width: 100%;
+    }
+}
