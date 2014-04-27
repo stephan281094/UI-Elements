@@ -17,6 +17,10 @@ a.fluid.button {
     width: 100%;
 }
 
+a.rounded.button {
+    border-radius: 100px;
+}
+
 a.button:hover {
     background-color: #666;
 }
