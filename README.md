@@ -11,3 +11,4 @@ UI Elements is a library that contains responsive HTML elements like:
 
 ### Note:
 This repository contains code of various libraries. Before release, these libraries should be removed from the repository. Instead, a link to a CDN should be added.
+/
