@@ -1,13 +1,14 @@
-.pad-1    {padding-top:  1rem; padding-bottom:  1rem;}
-.pad-2    {padding-top:  2rem; padding-bottom:  2rem;}
-.pad-3    {padding-top:  3rem; padding-bottom:  4rem;}
-.pad-4    {padding-top:  4rem; padding-bottom:  4rem;}
-.pad-5    {padding-top:  5rem; padding-bottom:  5rem;}
-.pad-6    {padding-top:  6rem; padding-bottom:  6rem;}
-.pad-7    {padding-top:  7rem; padding-bottom:  7rem;}
-.pad-8    {padding-top:  8rem; padding-bottom:  8rem;}
-.pad-9    {padding-top:  9rem; padding-bottom:  9rem;}
-.pad-10   {padding-top: 10rem; padding-bottom: 10rem;}
+.pad-05   {padding: 0.5rem;}
+.pad-1    {padding: 001rem;}
+.pad-2    {padding: 002rem;}
+.pad-3    {padding: 003rem;}
+.pad-4    {padding: 004rem;}
+.pad-5    {padding: 005rem;}
+.pad-6    {padding: 006rem;}
+.pad-7    {padding: 007rem;}
+.pad-8    {padding: 008rem;}
+.pad-9    {padding: 009rem;}
+.pad-10   {padding: 010rem;}
 
 .pad-1-0  {padding-top:  1rem; padding-bottom:  1rem;}
 .pad-2-0  {padding-top:  2rem; padding-bottom:  2rem;}
