@@ -1,13 +1,13 @@
-# [UI Elements](http://ui.blueglimpse.com)
-###### Name has yet to be determined
+# UI Elements
+This repository is basically a place where I save UI elements that I use in projects.
+Whenever I am working on a project that needs a UI element that I already created,
+I can just go back here. Take the code and finish quicker.
 
-### What is UI Elements?
-UI Elements is a library that contains responsive HTML elements like:
-* Buttons
-* Grid
-* Modals
-* Breadcrumbs
-* etc
+### Tools being used
+- [SASS](http://sass-lang.com)
+- [Coffeescript](http://coffeescript.org)
+- [Bourbon](http://bourbon.io)
+- [jQuery](http://jquery.com)
 
-### Note:
-This repository contains code of various libraries. Before release, these libraries should be removed from the repository. Instead, a link to a CDN should be added.
+### Contributing
+If you'd like to contribute, please do!
