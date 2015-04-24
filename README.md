@@ -1,13 +1,11 @@
 # UI Elements
-This repository is basically a place where I save UI elements that I use in projects.
-Whenever I am working on a project that needs a UI element that I already created,
-I can just go back here. Take the code and finish quicker.
+A collection of beautifully crafted UI elements, so you don't have to!
 
-### Tools being used
-- [SASS](http://sass-lang.com)
-- [Coffeescript](http://coffeescript.org)
-- [Bourbon](http://bourbon.io)
-- [jQuery](http://jquery.com)
+### Running the code
+This project is built using [Meteor](http://meteor.com) for faster prototyping.
+Instead of having to set up a whole gulpfile, having to install SASS, having to install Coffeescript, having to install Bourbon etc, all you have to do is:
+- [Install meteor](http://meteor.com/install)
+- Run `meteor`
 
 ### Contributing
 If you'd like to contribute, please do!
