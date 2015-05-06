@@ -1,0 +1,43 @@
+@mixin font-size($size) {
+	font-size: $size;
+
+	@media #{$tablet-width} {
+		font-size: decrease($size, 15%)
+	}
+
+	@media #{$phone-width} {
+		font-size: decrease($size, 35%)
+	}
+}
+
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+@mixin flexbox {
+	@include display(flex);
+	@include flex-wrap(wrap);
+}
+
+// Until next version of meteor-bourbon
+@mixin selection($current-selector: false) {
+	@if $current-selector {
+		&::-moz-selection {
+			@content;
+		}
+
+		&::selection {
+			@content;
+		}
+	} @else {
+		::-moz-selection {
+			@content;
+		}
+
+		::selection {
+			@content;
+		}
+	}
+}
