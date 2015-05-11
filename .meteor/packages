@@ -7,6 +7,6 @@
 meteor-platform
 autopublish
 insecure
-fourseven:scss
+fourseven:scss@3.0.0
 wolves:bourbon
 coffeescript
