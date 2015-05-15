@@ -14,3 +14,7 @@ body {
 main {
 	@include flex(1);
 }
+
+section.hero {
+	overflow: auto;
+}
