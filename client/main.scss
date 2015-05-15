@@ -1,13 +1,20 @@
 @charset "utf-8";
 @import
 
+// Vendor
 ".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon/bourbon",
 
-"app/helpers/functions",
-"app/helpers/mixins",
-"app/helpers/variables",
+// Helpers
+"helpers/functions",
+"helpers/mixins",
+"helpers/variables",
 
-"app/layout/layout",
+// Components
+"components/button/button",
+"components/nav/nav",
 
-"app/components/button/button",
-"app/components/nav/nav";
+// Layout
+"layout/layout",
+
+// Modules
+"modules/home/home";
