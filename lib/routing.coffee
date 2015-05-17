@@ -7,3 +7,9 @@ if Meteor.isClient
 	Router.route '/',
 		action: ->
 			@render 'home'
+	Router.route '/recommended',
+		action: ->
+			@render 'home'
+	Router.route '/bookmarks',
+		action: ->
+			@render 'home'

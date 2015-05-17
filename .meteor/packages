@@ -11,3 +11,4 @@ fourseven:scss@3.0.0
 wolves:bourbon
 coffeescript
 iron:router
+zimme:iron-router-active

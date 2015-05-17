@@ -7,9 +7,8 @@
 	<nav>
 		<a href="/">Ui Elements</a>
 		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/">Top stories</a></li>
-			<li><a href="/">Bookmarks</a></li>
+			<li class="{{isActiveRoute regex='^recommended$'}}"><a href="/recommended">Recommended</a></li>
+			<li class="{{isActiveRoute regex='^bookmarks$'}}"><a href="/bookmarks">Bookmarks</a></li>
 		</ul>
 	</nav>
 	<main>
