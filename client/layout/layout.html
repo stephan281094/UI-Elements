@@ -5,11 +5,9 @@
 
 <template name="layout">
 	<nav>
-		<a href="/">Ui Elements</a>
-		<ul>
-			<li class="{{isActiveRoute regex='^recommended$'}}"><a href="/recommended">Recommended</a></li>
-			<li class="{{isActiveRoute regex='^bookmarks$'}}"><a href="/bookmarks">Bookmarks</a></li>
-		</ul>
+		<a href="/">UI Elements</a>
+		<a class="{{isActiveRoute regex='^recommended$'}}" href="/recommended">Recommended</a>
+		<a class="{{isActiveRoute regex='^bookmarks$'}}" href="/bookmarks">Bookmarks</a>
 	</nav>
 	<main>
 		{{>yield}}
