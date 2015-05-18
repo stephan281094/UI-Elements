@@ -13,19 +13,21 @@ nav {
 		margin: 0 0.5rem;
 		line-height: 4rem;
 		text-decoration: none;
-		color: rgba(0, 0, 0, 0.6);
+		color: rgba(0, 0, 0, 0.5);
 		display: inline-block;
 	}
 
 	a:first-child {
-		margin: 0 1rem;
-		font-size: 1.5rem;
-		color: rgba(0, 0, 0, 0.9);
+		padding-left: 1rem;
+		margin: 0 1rem 0 0;
+		font-size: 1.75rem;
+		font-weight: 600;
+		color: rgba(0, 0, 0, 0.8);
 	}
 
 	a:not(:first-child) {
 		text-transform: uppercase;
-		font-size: 9pt;
+		font-size: 0.75rem;
 		font-weight: 200;
 		letter-spacing: 1px;
 
