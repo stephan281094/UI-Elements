@@ -5,11 +5,17 @@
 
 <template name="layout">
 	<nav>
-		<a href="/">Glimpse</a>
-		<a class="{{isActiveRoute regex='^recommended$'}}" href="/recommended">Recommended</a>
-		<a class="{{isActiveRoute regex='^bookmarks$'}}" href="/bookmarks">Bookmarks</a>
+		<a href="/">Patria</a>
+		<a href="/" class="{{isActivePath regex='^\/$'}}">Home</a>
+		<a href="/recommended" class="{{isActivePath regex='^/recommended$'}}">Recommended</a>
+		<a href="/bookmarks" class="{{isActivePath regex='^/bookmarks$'}}">Bookmarks</a>
 	</nav>
 	<main>
-		{{>yield}}
+		<div class="main-content">
+			<div class="inner-content">
+				{{>yield}}
+			</div>
+		</div>
+		<aside></aside>
 	</main>
 </template>

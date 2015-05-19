@@ -12,9 +12,27 @@ body {
 }
 
 main {
+	@include display(flex);
 	@include flex(1);
+	@include flex-direction(row);
+	@include align-items(stretch);
 }
 
 section.hero {
 	overflow: auto;
+}
+
+.main-content {
+	@include flex(1);
+}
+
+.inner-content {
+	width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+aside {
+	width: 400px;
+	background-color: #fafafa;
 }

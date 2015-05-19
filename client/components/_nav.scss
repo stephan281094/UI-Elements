@@ -5,6 +5,7 @@ nav {
 	font-family: $font-default;
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 	overflow: hidden;
+	padding-right: 400px;
 	@include display(flex);
 	@include flex-direction(row);
 
