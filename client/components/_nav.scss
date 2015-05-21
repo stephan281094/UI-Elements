@@ -1,64 +1,46 @@
-// Variables
-$color-white:  rgba(255, 255, 255, 1);
-$color-dark:   rgba(0, 0, 0, 0.9);
-$color-medium: rgba(0, 0, 0, 0.8);
-$color-light:  rgba(0, 0, 0, 0.5);
-
-$nav-height: 4rem;
-
 nav {
-	position: relative;
+	position: fixed;
 	width: 100%;
 	height: $nav-height;
 	background-color: $color-white;
 	font-family: $font-default;
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 1px $color-background;
 	overflow: hidden;
-	@include display(flex);
-	@include flex-direction(row);
+	padding: 0 1rem;
 
 	.logo {
+		position: absolute;
+		left: 50%;
+		margin: 0;
 		height: $nav-height;
 		line-height: $nav-height;
 		text-decoration: none;
 		display: inline-block;
-		position: absolute;
-		padding: 0 1rem;
-		margin: 0;
 		font-size: 1.75rem;
 		font-weight: 600;
 		color: $color-medium;
+		@include transform(translateX(-50%));
+		@include transition(.5s);
 	}
 
-	ul {
-		padding: 0;
-		margin: 0 auto;
-		width: 620px;
+	a {
 		height: $nav-height;
-		list-style: none;
-	}
-
-	li {
-		height: $nav-height;
-		margin: 0 0.5rem;
+		margin: 0 1rem;
 		line-height: $nav-height;
 		text-decoration: none;
 		color: $color-light;
+		cursor: pointer;
 		display: inline-block;
-	}
-
-	li.active {
-		box-shadow: inset 0 -2px 0 0 $color-dark;
-	}
-
-	li.active a {
-		color: $color-dark;
+		opacity: 1;
+		@include align-self(flex-start);
+		@include transition(opacity .5s)
 	}
 
 	a:not(.logo) {
+		float: right;
 		text-transform: uppercase;
-		font-size: 0.75rem;
-		font-weight: 200;
+		font-size: 0.9rem;
+		font-weight: 500;
 		letter-spacing: 1px;
 		color: $color-light;
 		height: 100%;
@@ -66,21 +48,30 @@ nav {
 		text-decoration: none;
 		display: inline-block;
 
-		&:hover {
+		&.active, &:hover {
 			color: $color-dark;
+		}
+
+		&.active {
+			box-shadow: inset 0 -2px 0 0 $color-dark;
 		}
 	}
 
-	.nav-tabs {
-		@include flex(1);
-		margin-right: 400px;
+	a.left {
+		float: left;
 	}
 
-	.nav-meta {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: $nav-height;
-		width: 400px;
+	@media #{$tablet-width} {
+		a:not(.logo):not(.left) {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+
+	@media #{$phone-width} {
+		a.left {
+			visibility: hidden;
+			opacity: 0;
+		}
 	}
 }
