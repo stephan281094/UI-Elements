@@ -5,15 +5,11 @@
 
 <template name="layout">
 	<nav>
-		<div class="nav-tabs">
-			<a href="/" class="logo">Patria</a>
-			<ul>
-				<li class="{{isActivePath regex='^\/$'}}"><a href="/">Home</a></li>
-				<li class="{{isActivePath regex='^/recommended$'}}"><a href="/recommended">Recommended</a></li>
-				<li class="{{isActivePath regex='^/bookmarks$'}}"><a href="/bookmarks">Bookmarks</a></li>
-			</ul>
-		</div>
-		<div class="nav-meta"></div>
+		<a href="/" class="logo">Patria</a>
+		<button href="/" class="menu-toggler">
+			<span>Menu</span>
+		</button>
+		<a class="login">Login</a>
 	</nav>
 	<main>
 		<div class="main-content">

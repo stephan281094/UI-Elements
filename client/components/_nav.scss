@@ -7,6 +7,7 @@ nav {
 	box-shadow: 0 0 1px $color-background;
 	overflow: hidden;
 	padding: 0 1rem;
+	z-index: 10;
 
 	.logo {
 		position: absolute;
@@ -23,7 +24,7 @@ nav {
 		@include transition(.5s);
 	}
 
-	a {
+	a, .menu-toggler {
 		height: $nav-height;
 		margin: 0 1rem;
 		line-height: $nav-height;
@@ -36,7 +37,7 @@ nav {
 		@include transition(opacity .5s)
 	}
 
-	a:not(.logo) {
+	a:not(.logo), .menu-toggler {
 		float: right;
 		text-transform: uppercase;
 		font-size: 0.9rem;
@@ -48,30 +49,27 @@ nav {
 		text-decoration: none;
 		display: inline-block;
 
-		&.active, &:hover {
+		&:hover {
 			color: $color-dark;
 		}
-
-		&.active {
-			box-shadow: inset 0 -2px 0 0 $color-dark;
-		}
 	}
 
-	a.left {
+	.menu-toggler {
 		float: left;
+		cursor: pointer;
+		padding-left: 1.5rem;
+		background: url('/images/icon-menu.svg') no-repeat;
+		background-size: 18px $nav-height;
 	}
 
-	@media #{$tablet-width} {
-		a:not(.logo):not(.left) {
-			visibility: hidden;
-			opacity: 0;
-		}
+	.menu-toggler span {
+		opacity: 0;
+		display: block;
+		@include transition(.2s);
 	}
 
-	@media #{$phone-width} {
-		a.left {
-			visibility: hidden;
-			opacity: 0;
-		}
+	.menu-toggler:hover span {
+		opacity: 1;
+		@include transform(translateX(0.5rem));
 	}
 }
