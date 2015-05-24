@@ -1,6 +1,16 @@
 <template name="home">
-	<section class="hero">
-		<h1>Hello world!</h1>
-		<button>An awesome button</button>
-	</section>
+	{{ #unless currentUser }}
+		<header>
+			<h1>UI Elements</h1>
+			<h4>A collection of gorgeous responsive UI Elements</h4>
+			<button class="btn login">Like this button!</button>
+		</header>
+	{{ else }}
+		<a class="board" href="/example">
+			<h5>Example board</h5>
+			<p class="description">
+				This is an example board
+			</p>
+		</a>
+	{{ /unless }}
 </template>

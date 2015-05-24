@@ -32,7 +32,7 @@ nav {
 		display: inline-block;
 		opacity: 1;
 		@include align-self(flex-start);
-		@include transition(opacity .5s)
+		@include transition(opacity .5s);
 	}
 
 	a:not(.logo), .menu-toggler {

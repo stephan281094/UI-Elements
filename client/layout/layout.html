@@ -1,22 +1,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>UI Elements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 
 <template name="layout">
 	<nav>
-		<a href="/" class="logo">Patria</a>
+		<a href="/" class="logo">UI Elements</a>
 		<button href="/" class="menu-toggler">
 			<span>Menu</span>
 		</button>
-		<a class="login">Login</a>
+
+		{{ #if currentUser }}
+			<a href="/{{ currentUser.username }}">{{ currentUser.username }}</a>
+		{{ else }}
+			<a class="login">Login</a>
+		{{ /if}}
 	</nav>
-	<main>
-		<div class="main-content">
-			<div class="inner-content">
-				{{>yield}}
-			</div>
-		</div>
-		<aside></aside>
+	<main id="{{ template }}">
+		{{ >yield }}
 	</main>
 </template>

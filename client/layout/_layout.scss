@@ -5,34 +5,78 @@
 }
 
 body {
+	padding: 0;
 	margin: 0;
+	width: 100%;
+	height: 100%;
 	min-height: 100vh;
+	background-color: $color-background;
+	font-family: sans-serif;
+	font-weight: 100;
+
+	@include selection {
+		color: #fff;
+		background-color: rgba($color-primary, 0.5);
+	}
+}
+
+ul {
+	list-style: none;
+
+	&, li {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	@include user-select(none);
+}
+
+main {
+	height: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+
+	padding-top: $nav-height;
 	@include display(flex);
 	@include flex-direction(column);
 }
 
-main {
-	@include display(flex);
+header {
+	background-color: #fff;
+	min-height: 50vh;
+	width: 100%;
+	@include flex-direction(column);
+	@include justify-content(center);
+	@include align-items(center);
+}
+
+section {
 	@include flex(1);
-	@include flex-direction(row);
-	@include align-items(stretch);
+	@include flex-direction(column);
+	@include justify-content(center);
+	text-align: center;
 }
 
-section.hero {
-	overflow: auto;
+header, section {
+	padding: 4.5rem 20%;
+	overflow: hidden;
+	@include flexbox;
 }
 
-.main-content {
-	@include flex(1);
+@media #{$tablet-width} {
+	header, section {
+		padding: 4.5rem 10%;
+	}
 }
 
-.inner-content {
-	width: 620px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-aside {
-	width: 400px;
-	background-color: #fafafa;
+@media #{$phone-width} {
+	header, section {
+		padding: 4.5rem 5%;
+		@include flex-direction(column);
+	}
 }

@@ -4,19 +4,16 @@
 // Vendor
 ".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon/bourbon",
 
-// Helpers
-"helpers/functions",
-"helpers/mixins",
-"helpers/variables",
+"application/functions.scss",
+"application/mixins.scss",
+"application/variables.scss",
 
-// Components
-"components/nav",
-"components/button",
+"application/components/typography",
+"application/components/loading",
+"application/components/button",
 
-// Layout
-"layout/layout",
+"application/layout/layout.scss",
+"application/nav/nav.scss",
 
-// Modules
-"modules/home/home",
-"modules/recommended/recommended",
-"modules/bookmarks/bookmarks";
+"home/home.scss",
+"profile/profile.scss";
