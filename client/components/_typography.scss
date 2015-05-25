@@ -1,40 +1,62 @@
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
-	width: 100%;
-	display: inline-block;
+    font-weight: 400;
+    width: 100%;
+    display: inline-block;
 }
 
 h1, h2, h3, h4, h5, h6, a, span, p {
-	margin: 0;
-	font-family: $font-default;
-	@include font-smoothing;
+    margin: 0;
+    font-family: $font-default;
+    @include font-smoothing;
 }
 
 h1, h2, h3, h4, h5, h6, span, p {
-	&:not(:last-child) {
-		margin-bottom: 1rem;
-	}
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
 }
 
 a {
-	text-decoration: none;
-	display: inline-block;
-	font-weight: 200;
-	color: $color-primary;
-
-	&:hover {
-		text-decoration: underline;
-	}
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 200;
+    color: $color-primary;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 p {
-	font-weight: 200;
-	color: #555;
+    font-weight: 200;
+    color: #555;
 }
 
-h1 {@include font-size(  5rem); color: #333;}
-h2 {@include font-size(  4rem); color: #333;}
-h3 {@include font-size(  3rem); color: #333;}
-h4 {@include font-size(  2rem); color: #aaa;}
-h5 {@include font-size(  1rem); color: #333;}
-h6 {@include font-size(0.5rem); color: #333;}
+h1 {
+    @include font-size(5rem);
+    color: #333;
+}
+
+h2 {
+    @include font-size(4rem);
+    color: #333;
+}
+
+h3 {
+    @include font-size(3rem);
+    color: #333;
+}
+
+h4 {
+    @include font-size(2rem);
+    color: #aaa;
+}
+
+h5 {
+    @include font-size(1rem);
+    color: #333;
+}
+
+h6 {
+    @include font-size(0.5rem);
+    color: #333;
+}

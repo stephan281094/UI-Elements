@@ -1,19 +1,17 @@
 @charset "utf-8";
-@import
 
-// Vendor
-".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon/bourbon",
+@import ".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon/bourbon";
 
-"application/functions.scss",
-"application/mixins.scss",
-"application/variables.scss",
+@import "application/functions.scss";
+@import "application/mixins.scss";
+@import "application/variables.scss";
 
-"application/components/typography",
-"application/components/loading",
-"application/components/button",
+@import "application/components/typography";
+@import "application/components/loading";
+@import "application/components/button";
 
-"application/layout/layout.scss",
-"application/nav/nav.scss",
+@import "application/layout/layout.scss";
+@import "application/nav/nav.scss";
 
-"home/home.scss",
-"profile/profile.scss";
+@import "home/home.scss";
+@import "profile/profile.scss";
