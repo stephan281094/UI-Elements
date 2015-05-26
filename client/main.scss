@@ -1,17 +1,10 @@
 @charset "utf-8";
-
 @import ".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon/bourbon";
-
-@import "application/functions.scss";
-@import "application/mixins.scss";
-@import "application/variables.scss";
-
-@import "application/components/typography";
-@import "application/components/loading";
-@import "application/components/button";
-
-@import "application/layout/layout.scss";
-@import "application/nav/nav.scss";
-
-@import "home/home.scss";
-@import "profile/profile.scss";
+@import "helpers/functions.scss";
+@import "helpers/mixins.scss";
+@import "helpers/variables.scss";
+@import "components/typography";
+@import "components/button";
+@import "components/nav.scss";
+@import "layout/layout.scss";
+@import "modules/home/home.scss";
