@@ -13,6 +13,8 @@ body {
     background-color: $color-background;
     font-family: sans-serif;
     font-weight: 100;
+    overflow-x: hidden;
+
     @include selection {
         color: #fff;
         background-color: rgba($color-primary, 0.5);
@@ -21,6 +23,7 @@ body {
 
 ul {
     list-style: none;
+
     &, li {
         padding: 0;
         margin: 0;
@@ -38,6 +41,7 @@ main {
     height: 100%;
     min-height: 100vh;
     overflow: hidden;
+
     padding-top: $nav-height;
     @include display(flex);
     @include flex-direction(column);
@@ -47,7 +51,7 @@ header {
     background-color: #fff;
     min-height: 50vh;
     width: 100%;
-    @include flex-direction(column);
+    @include flex-direction(row);
     @include justify-content(center);
     @include align-items(center);
 }
@@ -63,6 +67,40 @@ header, section {
     padding: 4.5rem 20%;
     overflow: hidden;
     @include flexbox;
+}
+
+.applicationContent {
+    position: relative;
+    z-index: 1;
+    background-color: $color-background;
+    @include transition(.4s);
+}
+
+.applicationContent.menu-open {
+    opacity: 0.6;
+    @include transform(translate3d(40%, 0, 0) scale3d(0.85, 0.85, 1));
+}
+
+.applicationMenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 40vw;
+    height: 100vh;
+    z-index: 0;
+    @include display(flex);
+    @include flex-direction(column);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+}
+
+.applicationMenu ul {
+    margin: auto;
+}
+
+.applicationMenu li {
+    font-size: 2rem;
+    margin: 1rem 0;
 }
 
 @media #{$tablet-width} {

@@ -5,19 +5,30 @@
 </head>
 
 <template name="layout">
-	<nav>
-		<a href="/" class="logo">UI Elements</a>
-		<button href="/" class="menu-toggler">
-			<span>Menu</span>
-		</button>
+	<div class="notifications"></div>
+	<div class="applicationMenu">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/profile">Profile</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/login">Login</a></li>
+		</ul>
+	</div>
+	<div class="applicationContent">
+		<nav class="fixed">
+			<a href="/" class="logo">UI Elements</a>
+			<button class="menu-toggler">
+				<span>Menu</span>
+			</button>
 
-		{{ #if currentUser }}
-			<a href="/{{ currentUser.username }}">{{ currentUser.username }}</a>
-		{{ else }}
-			<a class="login">Login</a>
-		{{ /if}}
-	</nav>
-	<main id="{{ template }}">
-		{{ >yield }}
-	</main>
+			{{ #if currentUser }}
+				<a href="/{{ currentUser.username }}">{{ currentUser.username }}</a>
+			{{ else }}
+				<a class="login">Login</a>
+			{{ /if}}
+		</nav>
+		<main id="{{ template }}">
+			{{ >yield }}
+		</main>
+	</div>
 </template>
