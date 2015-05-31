@@ -1,6 +1,6 @@
 * {
     &, &:before, &:after {
-        @include box-sizing(border-box);
+        box-sizing: border-box;
     }
 }
 
@@ -74,6 +74,7 @@ header, section {
     z-index: 1;
     background-color: $color-background;
     @include transition(.4s);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
 }
 
 .applicationContent.menu-open {

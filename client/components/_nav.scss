@@ -70,7 +70,7 @@ nav {
         height: 2px;
         bottom: 0.75rem;
         left: 0;
-        background-color: $color-primary;
+        background-color: #333;
         visibility: hidden;
         opacity: 0;
         @include transform(scaleX(0));
