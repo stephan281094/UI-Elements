@@ -49,8 +49,7 @@ main {
 
 header {
     background-color: #fff;
-    min-height: 50vh;
-    width: 100%;
+    width: 100vw;
     @include flex-direction(row);
     @include justify-content(center);
     @include align-items(center);

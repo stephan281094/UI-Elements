@@ -2,7 +2,6 @@
     header {
         text-align: center;
         background: #fff;
-        @include flex(1);
         @include flex-direction(column);
         &:not(.dashboard) {
             min-height: 80vh;
