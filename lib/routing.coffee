@@ -1,9 +1,3 @@
-if Meteor.isClient
-	Router.configure
-		loadingTemplate:  'loading'
-		notFoundTemplate: 'notfound'
-		layoutTemplate:   'layout'
-
-	Router.route '/',
-		action: ->
-			@render 'home'
+FlowRouter.route '/',
+	action: ->
+		FlowLayout.render('layout', {content: 'home'})

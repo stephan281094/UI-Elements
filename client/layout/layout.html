@@ -27,8 +27,8 @@
 				<a class="login">Login</a>
 			{{ /if}}
 		</nav>
-		<main id="{{ template }}">
-			{{ >yield }}
+		<main>
+			{{> Template.dynamic template=content}}
 		</main>
 	</div>
 </template>
