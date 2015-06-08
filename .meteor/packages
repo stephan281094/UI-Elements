@@ -8,7 +8,7 @@ meteor-platform
 autopublish
 insecure
 fourseven:scss@3.0.0
-wolves:bourbon
+wolves:bourbon@2.0.0
 coffeescript
-meteorhacks:flow-router
+meteorhacks:flow-router@1.14.0
 meteorhacks:flow-layout
