@@ -21,6 +21,7 @@ a {
     display: inline-block;
     font-weight: 200;
     color: $color-primary;
+
     &:hover {
         text-decoration: underline;
     }
@@ -32,31 +33,31 @@ p {
 }
 
 h1 {
-    @include font-size(5rem);
+    font-size: 5rem;
     color: #333;
 }
 
 h2 {
-    @include font-size(4rem);
+    font-size: 4rem;
     color: #333;
 }
 
 h3 {
-    @include font-size(3rem);
+    font-size: 3rem;
     color: #333;
 }
 
 h4 {
-    @include font-size(2rem);
+    font-size: 2rem;
     color: #aaa;
 }
 
 h5 {
-    @include font-size(1rem);
+    font-size: 1rem;
     color: #333;
 }
 
 h6 {
-    @include font-size(0.5rem);
+    font-size: 0.5rem;
     color: #333;
 }

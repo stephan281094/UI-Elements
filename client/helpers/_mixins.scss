@@ -1,13 +1,3 @@
-@mixin font-size($size) {
-    font-size: $size;
-    @media #{$tablet-width} {
-        font-size: decrease($size, 15%);
-    }
-    @media #{$phone-width} {
-        font-size: decrease($size, 35%);
-    }
-}
-
 @mixin font-smoothing {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -6,14 +6,6 @@
 
 <template name="layout">
 	<div class="notifications"></div>
-	<div class="applicationMenu">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/profile">Profile</a></li>
-			<li><a href="https://github.com/stephan281094/UI-Elements">Github</a></li>
-			<li><a href="/login">Login</a></li>
-		</ul>
-	</div>
 	<div class="applicationContent">
 		<nav class="fixed nav">
 			<a href="/" class="logo">UI Elements</a>
@@ -30,5 +22,13 @@
 		<main>
 			{{> Template.dynamic template=content}}
 		</main>
+	</div>
+	<div class="applicationMenu">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/profile">Profile</a></li>
+			<li><a href="https://github.com/stephan281094/UI-Elements">Github</a></li>
+			<li><a href="/login">Login</a></li>
+		</ul>
 	</div>
 </template>

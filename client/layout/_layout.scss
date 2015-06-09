@@ -72,12 +72,11 @@ header, section {
     position: relative;
     z-index: 1;
     background-color: $color-background;
-    @include transition(.4s);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    @include transition(.4s);
 }
 
 .applicationContent.menu-open {
-    opacity: 0.6;
     @include transform(translate3d(40%, 0, 0) scale3d(0.85, 0.85, 1));
 }
 
@@ -88,10 +87,18 @@ header, section {
     width: 40vw;
     height: 100vh;
     z-index: 0;
+    opacity: 0;
+    @include transform(scale3d(.5, .5, .5));
     @include display(flex);
     @include flex-direction(column);
     @include align-items(center);
     @include flex-wrap(wrap);
+    @include transition(.6s);
+}
+
+.applicationContent.menu-open + .applicationMenu {
+    opacity: 1;
+    @include transform(scale3d(1, 1, 1));
 }
 
 .applicationMenu ul {
@@ -101,6 +108,10 @@ header, section {
 .applicationMenu li {
     font-size: 2rem;
     margin: 1rem 0;
+
+    a {
+        color: $color-dark;
+    }
 }
 
 @media #{$tablet-width} {
