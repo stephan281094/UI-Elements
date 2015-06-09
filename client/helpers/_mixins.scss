@@ -18,23 +18,3 @@
     @include display(flex);
     @include flex-wrap(wrap);
 }
-
-// Until next version of meteor-bourbon
-@mixin selection($current-selector: false) {
-    @if $current-selector {
-        &::-moz-selection {
-            @content;
-        }
-        &::selection {
-            @content;
-        }
-    }
-    @else {
-        ::-moz-selection {
-            @content;
-        }
-        ::selection {
-            @content;
-        }
-    }
-}
