@@ -59,7 +59,6 @@ section {
     @include flex(1);
     @include flex-direction(column);
     @include justify-content(center);
-    text-align: center;
     background-color: $color-background;
 }
 
