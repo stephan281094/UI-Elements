@@ -10,6 +10,6 @@ insecure
 fourseven:scss@3.0.0
 wolves:bourbon@2.0.0
 coffeescript
-meteorhacks:flow-router@1.14.0
+meteorhacks:flow-router@1.16.3
 meteorhacks:flow-layout
 reactjs:react
