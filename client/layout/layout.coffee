@@ -8,10 +8,11 @@ Template.layout.events
 		$('.applicationContent').toggleClass('menu-open')
 
 Template.layout.rendered = ->
-	$nav = $('.nav')
+	$nav    = $('.nav')
+	$window = $(window)
 
-	$(window).scroll ->
-		if $(window).scrollTop() <= 0
+	$window.scroll ->
+		if $window.scrollTop() <= 0
 			$nav.addClass('fixed')
 		else
 			$nav.removeClass('fixed')
