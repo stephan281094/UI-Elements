@@ -109,16 +109,14 @@ header, section {
     font-size: 2rem;
 
     a {
-        padding: 1rem;
+        margin: 1rem 0;
+        padding: 0 1rem;
         width: 100%;
         color: #444;
         text-decoration: none;
-        @include transition(.1s);
 
         &:hover {
-            border-radius: 2px;
-            padding-left: 1.5rem;
-            background-color: #f2f2f2;
+            box-shadow: -3px 0 0 0 #fff;
         }
     }
 }
