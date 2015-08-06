@@ -2,12 +2,14 @@ Template.layout.events
     'click .applicationContent.menu-open': (event, template) ->
         if not $(event.target).hasClass 'menu-toggler'
             event.preventDefault()
-            $('.applicationContent').removeClass('menu-open')
-            $('body').css({'overflow': 'auto'})
+            document.querySelector('body').classList.remove('no-scroll')
+            document.querySelector('.applicationContent')
+                .classList.remove('menu-open')
 
     'click .menu-toggler': (event, template) ->
-        $('.applicationContent').toggleClass('menu-open')
-        $('body').css({'overflow': 'hidden'})
+        document.querySelector('body').classList.add('no-scroll')
+        document.querySelector('.applicationContent')
+            .classList.toggle('menu-open')
 
 Template.layout.rendered = ->
     $('a[href*=#]:not([href=#])').click ->
