@@ -1,0 +1,57 @@
+@include keyframes(mouse-scroll) {
+    0% {
+        opacity: 1;
+        @include transform(translateY(0));
+    }
+    20% {
+        @include transform(translateY(5px));
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        @include transform(translateY(10px));
+    }
+    100% {
+        opacity: 0;
+        @include transform(translateY(0));
+    }
+}
+
+.mouse-scroll {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    display: inline-block;
+    line-height: 18px;
+    color: #7F8C8D;
+    color: #FFF;
+    margin-top: 10%;
+    text-decoration: none;
+    overflow: hidden;
+    @include transform(translateX(-50%));
+}
+
+.mouse-scroll .mouse {
+    position: relative;
+    display: block;
+    width: 33px;
+    height: 50px;
+    margin: 0 auto 20px;
+    border: 3px solid #FFF;
+    border-radius: 23px;
+}
+
+.mouse-scroll .mouse .mouse-movement {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin: -3px 0 0 -3px;
+    background: #FFF;
+    border-radius: 50%;
+    @include animation(mouse-scroll 2.5s linear infinite);
+}
