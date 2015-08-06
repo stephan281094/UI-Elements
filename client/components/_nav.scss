@@ -24,7 +24,7 @@
         font-weight: 800;
         letter-spacing: 5px;
         @include transform(translateX(-50%));
-        @include transition($nav-transition-speed);
+        @include transition($default-speed);
     }
 
     a, .menu-toggler {
@@ -38,7 +38,7 @@
         display: inline-block;
         opacity: 1;
         @include align-self(flex-start);
-        @include transition(opacity $nav-transition-speed);
+        @include transition(opacity $default-speed);
     }
 
     a:not(.logo), .menu-toggler {
@@ -63,7 +63,7 @@
         visibility: hidden;
         opacity: 0;
         @include transform(scaleX(0));
-        @include transition(0.3s ease-in-out 0s);
+        @include transition($default-speed ease-in-out);
     }
 
     a:not(.menu-toggler):hover:before {
@@ -96,7 +96,7 @@
         text-transform: uppercase;
         opacity: 0;
         display: block;
-        @include transition($nav-transition-speed);
+        @include transition($default-speed);
     }
 
     .menu-toggler:hover span {
