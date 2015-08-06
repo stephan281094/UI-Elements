@@ -42,9 +42,14 @@ main {
     min-height: 100vh;
     overflow: hidden;
 
-    padding-top: $nav-height;
     @include display(flex);
     @include flex-direction(column);
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
 }
 
 header {
@@ -56,10 +61,13 @@ header {
 }
 
 section {
+    position: relative;
+    min-height: 100vh;
+    background-color: $color-background;
+    @include display(flex);
     @include flex(1);
     @include flex-direction(column);
     @include justify-content(center);
-    background-color: $color-background;
 }
 
 header, section {

@@ -1,33 +1,21 @@
 <template name="home">
-	<header class="header">
-		<h1>UI Elements</h1>
-		<h4>A collection of beautifully crafted UI elements</h4>
-	</header>
-	<section>
-		<ul class="list-items">
-			<li class="block-small">
-				<img src="/bla" alt="">
-				<div class="body">
-					<h2>Gorgeous User Interface</h2>
-					<p>UI Elements features a gorgeous UI for a great user experience.</p>
-				</div>
-			</li>
-			<li class="block-small">
-				<img src="/bla" alt="">
-				<div class="body">
-					<h2>User Friendly</h2>
-					<p>UI Elements features a gorgeous UI for a great user experience.</p>
-				</div>
-			</li>
-			<li class="block-small">
-				<img src="/bla" alt="">
-				<div class="body">
-					<h2>Consistent typography</h2>
-					<p>UI Elements features a gorgeous UI for a great user experience.</p>
-				</div>
-			</li>
-		</ul>
-		<div class="block-small"></div>
-		<div class="block-small"></div>
-	</section>
+    <section id="hero">
+        <div class="center">
+            <h1>UI Elements</h1>
+            <h4>A collection of beautifully crafted UI elements</h4>
+        </div>
+    </section>
+    <section id="login">
+        <div class="center">
+            <h4>Login form</h4>
+            <p>A minimal and simplistic login feature</p>
+            <div class="login">
+                <form>
+                    <input class="{{ hasError }}" type="email" placeholder="Email adress" autofocus>
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="">
+                </form>
+            </div>
+        </div>
+    </section>
 </template>
