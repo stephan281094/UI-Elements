@@ -1,15 +1,13 @@
 Template.layout.events
     'click .applicationContent.menu-open': (event, template) ->
-        if not $(event.target).hasClass 'menu-toggler'
+        if (not event.target.classList.contains('menu-toggler'))
             event.preventDefault()
-            document.querySelector('body').classList.remove('no-scroll')
-            document.querySelector('.applicationContent')
-                .classList.remove('menu-open')
+            dqs('.applicationContent').classList.remove('menu-open')
+            dqs('body').classList.remove('no-scroll')
 
     'click .menu-toggler': (event, template) ->
-        document.querySelector('body').classList.add('no-scroll')
-        document.querySelector('.applicationContent')
-            .classList.toggle('menu-open')
+        dqs('.applicationContent').classList.toggle('menu-open')
+        dqs('body').classList.add('no-scroll')
 
 Template.layout.rendered = ->
     $('a[href*=#]:not([href=#])').click ->
@@ -19,3 +17,6 @@ Template.layout.rendered = ->
             if target.length
                 $('html,body').animate { scrollTop: target.offset().top }, 350
                 false
+
+dqs = (query) ->
+    document.querySelector(query)
