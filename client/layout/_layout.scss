@@ -52,28 +52,14 @@ main {
     vertical-align: middle;
 }
 
-header {
-    background-color: #fff;
-    width: 100vw;
-    @include flex-direction(row);
-    @include justify-content(center);
-    @include align-items(center);
-}
-
 section {
     position: relative;
     min-height: 100vh;
-    background-color: $color-background;
     @include display(flex);
     @include flex(1);
     @include flex-direction(column);
     @include justify-content(center);
-}
-
-header, section {
-    padding: 4.5rem 20%;
-    overflow: hidden;
-    @include flexbox;
+    @include flex-wrap(wrap);
 }
 
 .applicationContent {
@@ -130,14 +116,11 @@ header, section {
 }
 
 @media #{$tablet-width} {
-    header, section {
-        padding: 4.5rem 10%;
-    }
+
 }
 
 @media #{$phone-width} {
-    header, section {
-        padding: 4.5rem 5%;
+    section {
         @include flex-direction(column);
     }
 }

@@ -1,8 +1,9 @@
 Session.setDefault('errors', [])
 
 Template.home.helpers
-    hasError: (element) ->
-        'error' if element in Session.get('errors')
+    validate: ->
+        console.log(1)
+        # 'error' if element in Session.get('errors')
 
 Template.home.events
     'submit form': (event, template) ->

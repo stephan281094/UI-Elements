@@ -4,7 +4,17 @@
     text-rendering: optimizeLegibility;
 }
 
-@mixin flexbox {
-    @include display(flex);
-    @include flex-wrap(wrap);
+@mixin mask-image($image) {
+    -webkit-mask-image: $image;
+    mask-image: $image;
+}
+
+@mixin mask-repeat($option) {
+    -webkit-mask-repeat: $option;
+    mask-repeat: $option;
+}
+
+@mixin mask-position($position) {
+    -webkit-mask-position: $position;
+    mask-position: $position;
 }
