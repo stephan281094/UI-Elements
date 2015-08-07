@@ -14,8 +14,8 @@
             <p>A minimal and simplistic login component</p>
             <div class="login">
                 <form>
-                    <input {{ validate }} type="email" placeholder="Email adress">
-                    <input {{ validate }} type="password" placeholder="Password">
+                    <input class="{{ validate 'email' }}" type="email" placeholder="Email adress">
+                    <input class="{{ validate 'password' }}" type="password" placeholder="Password">
                     <button class="submit"></button>
                 </form>
             </div>
