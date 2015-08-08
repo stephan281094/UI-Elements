@@ -1,15 +1,12 @@
 Session.setDefault('errors', [])
 
 Template.home.helpers
-    validate: (input) ->
-        'error ' if (input in Session.get('errors'))
+    validate: (name) ->
+        'error' if (name in Session.get('errors'))
 
 Template.home.events
     'submit form': (event, template) ->
         event.preventDefault()
-
-        email = template.find('input[type=email]').value
-        pass  = template.find('input[type=password]').value
 
         if validateAll()
             template.find('form').classList.add('fadeOutLeft')
@@ -17,7 +14,7 @@ Template.home.events
 
     'keyup input': (event, template) ->
         self = event.target
-        if self.type in Session.get('errors')
+        if self.name in Session.get('errors')
             validate(self)
 
 validate = (input) ->
@@ -27,15 +24,15 @@ validate = (input) ->
     switch input.type
         when 'email'
             if validateEmail(value)
-                spliceItem(errors, input.type)
+                spliceItem(errors, input.name)
             else
-                uppush(errors, input.type)
+                uppush(errors, input.name)
 
         when 'password'
             if validatePassword(value)
-                spliceItem(errors, input.type)
+                spliceItem(errors, input.name)
             else
-                uppush(errors, input.type)
+                uppush(errors, input.name)
 
     Session.set('errors', errors)
 
