@@ -26,15 +26,15 @@ validate = (input) ->
     switch input.type
         when 'email'
             if validateEmail(input.value)
-                spliceItem(errors, input.name)
+                arrayRemove(errors, input.name)
             else
-                uppush(errors, input.name)
+                arrayInsert(errors, input.name)
 
         when 'password'
             if validatePassword(input.value)
-                spliceItem(errors, input.name)
+                arrayRemove(errors, input.name)
             else
-                uppush(errors, input.name)
+                arrayInsert(errors, input.name)
 
     Session.set('errors', errors)
 
@@ -45,12 +45,12 @@ validateAll = ->
     Session.get('errors').length is 0
 
 # Helpers ---------------------------------------------------------------------
-spliceItem = (haystack, item) ->
+arrayRemove = (haystack, item) ->
     index = haystack.indexOf(item)
     if index > -1
         haystack.splice(index, 1)
 
-uppush = (haystack, item) ->
+arrayInsert = (haystack, item) ->
     index = haystack.indexOf(item)
     if index < 0
         haystack.push(item)
