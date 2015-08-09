@@ -22,17 +22,16 @@ Template.home.events
 
 validate = (input) ->
     errors = Session.get('errors')
-    value  = input.value
 
     switch input.type
         when 'email'
-            if validateEmail(value)
+            if validateEmail(input.value)
                 spliceItem(errors, input.name)
             else
                 uppush(errors, input.name)
 
         when 'password'
-            if validatePassword(value)
+            if validatePassword(input.value)
                 spliceItem(errors, input.name)
             else
                 uppush(errors, input.name)
