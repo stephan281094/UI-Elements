@@ -1,4 +1,5 @@
 Session.setDefault('errors', [])
+Session.setDefault('submitted', false)
 
 Template.home.helpers
     validate: (name) ->
@@ -8,13 +9,15 @@ Template.home.events
     'submit form': (event, template) ->
         event.preventDefault()
 
+        Session.set('submitted', true)
+
         if validateAll()
             template.find('form').classList.add('fadeOutLeft')
             template.find('.login').classList.add('fade-green')
 
     'keyup input': (event, template) ->
         self = event.target
-        if self.name in Session.get('errors')
+        if self.name in Session.get('errors') || Session.get('submitted')
             validate(self)
 
 validate = (input) ->
