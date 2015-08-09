@@ -4,6 +4,8 @@ Session.setDefault('submitted', false)
 Template.home.helpers
     validate: (name) ->
         'error' if (name in Session.get('errors'))
+    disabled: ->
+        'disabled' if Session.get('errors').length > 0
 
 Template.home.events
     'submit form': (event, template) ->
@@ -17,7 +19,7 @@ Template.home.events
 
     'keyup input': (event, template) ->
         self = event.target
-        if self.name in Session.get('errors') || Session.get('submitted')
+        if self.name in Session.get('errors') or Session.get('submitted')
             validate(self)
 
 validate = (input) ->
