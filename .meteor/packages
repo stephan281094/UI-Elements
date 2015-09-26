@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 autopublish
 insecure
 fourseven:scss@3.0.0
@@ -12,3 +11,17 @@ wolves:bourbon@2.0.0
 coffeescript
 meteorhacks:flow-router@1.16.3
 meteorhacks:flow-layout
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
