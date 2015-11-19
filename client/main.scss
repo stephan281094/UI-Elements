@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import ".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon/bourbon";
+@import "{wolves:bourbon}/bourbon";
 
 @import "helpers/functions.scss";
 @import "helpers/mixins.scss";
